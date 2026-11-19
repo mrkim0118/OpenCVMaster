@@ -68,6 +68,18 @@ Run the headless self-test (every operation on color and gray input, plus file f
 dotnet run -- --selftest
 ```
 
+### Release
+
+Build a self-contained app (no .NET runtime needed on the target PC), then compile the installer with [Inno Setup 6](https://jrsoftware.org/isinfo.php). The setup file is written to `installer\Output\OpenCVMaster-Setup-<version>.exe`.
+
+```powershell
+dotnet publish -c Release -r win-x64 --self-contained true -o publish
+```
+
+```powershell
+ISCC.exe installer\OpenCVMaster.iss
+```
+
 ## Project Layout
 
 | Path | Contents |
@@ -78,6 +90,7 @@ dotnet run -- --selftest
 | `Core/ImageIO.cs` | Multi-decoder image loading and saving |
 | `Core/SelfTest.cs` | Headless verification (`--selftest`) |
 | `UI/` | Main window, theme and custom controls |
+| `installer/OpenCVMaster.iss` | Inno Setup installer script |
 
 ## Libraries
 

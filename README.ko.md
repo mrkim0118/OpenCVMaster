@@ -68,6 +68,18 @@ dotnet run -- "경로\이미지.jpg"
 dotnet run -- --selftest
 ```
 
+### 릴리스
+
+런타임을 포함해 빌드한 뒤(설치할 PC에 .NET이 없어도 됨) [Inno Setup 6](https://jrsoftware.org/isinfo.php)로 설치 파일을 만듭니다. 셋업 파일은 `installer\Output\OpenCVMaster-Setup-<버전>.exe`에 생성됩니다.
+
+```powershell
+dotnet publish -c Release -r win-x64 --self-contained true -o publish
+```
+
+```powershell
+ISCC.exe installer\OpenCVMaster.iss
+```
+
 ## 프로젝트 구조
 
 | 경로 | 내용 |
@@ -78,6 +90,7 @@ dotnet run -- --selftest
 | `Core/ImageIO.cs` | 다중 디코더 이미지 로드·저장 |
 | `Core/SelfTest.cs` | 헤드리스 검증 (`--selftest`) |
 | `UI/` | 메인 창, 테마, 커스텀 컨트롤 |
+| `installer/OpenCVMaster.iss` | Inno Setup 설치 스크립트 |
 
 ## 사용한 라이브러리
 
