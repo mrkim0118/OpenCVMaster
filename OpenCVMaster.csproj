@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <!-- WPF is used only for its WIC decoders (HEIC, JXR, DDS...) as an image-loading fallback -->
+    <UseWPF>true</UseWPF>
+    <!-- OpenCvSharp and System.Drawing share type names (Point, Size), so usings are explicit -->
+    <ImplicitUsings>disable</ImplicitUsings>
+    <ApplicationIcon>Assets\app.ico</ApplicationIcon>
+    <AssemblyTitle>OpenCVMaster</AssemblyTitle>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OpenCvSharp4.Extensions" Version="4.13.0.20261107" />
+    <PackageReference Include="OpenCvSharp4.Windows" Version="4.13.0.20261107" />
+  </ItemGroup>
+
+</Project>
+
