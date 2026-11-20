@@ -14,6 +14,10 @@
 
 Load an image, chain processing steps into a sequence, tune each step's parameters with sliders, and watch every intermediate result update live.
 
+## Download
+
+Get `OpenCVMaster-Setup-<version>.exe` from the [Releases](https://github.com/mrkim0118/OpenCVMaster/releases/latest) page and run it. The .NET runtime is included, so nothing else needs to be installed.
+
 ## Features
 
 - **88 OpenCV operations in 13 categories**: Color conversion, filters/blur, thresholding, morphology, edge detection, geometric transforms, histograms, feature detection (SIFT, ORB, AKAZE, BRISK, KAZE, FAST, MSER…), contours & shape analysis, segmentation (Watershed, GrabCut, K-means, SLIC), noise/restoration/frequency (DFT), object detection (QR, HOG people, template matching) and compositing with the original.
