@@ -4,7 +4,7 @@
 ; then compile this script with ISCC.exe. Output: installer\Output\OpenCVMaster-Setup-<version>.exe
 
 #define AppName "OpenCV Master"
-#define AppVersion "1.0.0"
+#define AppVersion "1.0.1"
 #define AppExe "OpenCVMaster.exe"
 
 [Setup]
