@@ -27,6 +27,7 @@
 - **결과 정보**: 오츠 임계값, 윤곽선·특징점 개수, QR 해독 문자열 등을 보여줍니다.
 - **다양한 이미지 형식**: OpenCV 디코더 → Windows Imaging Component(HEIC/HEIF, JXR, DDS, ICO 등) → GDI+(EMF/WMF) 순으로 시도합니다. 한글 경로를 지원하며 끌어다 놓기로도 열 수 있습니다.
 - **픽셀 검사**: 이미지 위에 마우스를 올리면 좌표와 픽셀 값이 표시됩니다.
+- **업데이트 확인**: 실행할 때 GitHub 최신 릴리스를 확인하고, 새 버전이 있으면 내려받아 설치할지 묻습니다.
 
 ## 요구 사항
 
@@ -95,6 +96,7 @@ ISCC.exe installer\OpenCVMaster.iss
 | `Core/SelfTest.cs` | 헤드리스 검증 (`--selftest`) |
 | `UI/` | 메인 창, 테마, 커스텀 컨트롤 |
 | `installer/OpenCVMaster.iss` | Inno Setup 설치 스크립트 |
+| `Core/GitHubUpdater.cs` | GitHub 릴리스 업데이트 확인 |
 
 ## 사용한 라이브러리
 

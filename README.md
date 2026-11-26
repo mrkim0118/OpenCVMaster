@@ -27,6 +27,7 @@ Get `OpenCVMaster-Setup-<version>.exe` from the [Releases](https://github.com/mr
 - **Result info**: Otsu threshold values, contour/keypoint counts, decoded QR text, etc.
 - **Wide image format support**: OpenCV decoders, then Windows Imaging Component (HEIC/HEIF, JXR, DDS, ICO…), then GDI+ (EMF/WMF). Non-ASCII (e.g. Korean) paths are supported. Drag & drop works.
 - **Pixel inspector**: Hover the image to see coordinates and pixel values.
+- **Update check**: On launch, checks the latest GitHub release and asks whether to download and install the new version.
 
 ## Requirements
 
@@ -95,6 +96,7 @@ ISCC.exe installer\OpenCVMaster.iss
 | `Core/SelfTest.cs` | Headless verification (`--selftest`) |
 | `UI/` | Main window, theme and custom controls |
 | `installer/OpenCVMaster.iss` | Inno Setup installer script |
+| `Core/GitHubUpdater.cs` | GitHub release update check |
 
 ## Libraries
 
